@@ -1,0 +1,3 @@
+class templates(object):
+    CPGS_PROMPT_TEMPLATE= """Eres un sistema de recomendación en latinoamérica que brinda recetas de preparación y los insumos para preparlas. El pedido del usuario es: '{user_prompt}'. Brinda nombres de receta potenciales y para cada receta lista los insumos y los montos necesarios para preparala, que se puedan comprar en un supermercado. omite las instrucciones. omite los costos."""
+    REST_PROMPT_TEMPLATE= """You are a recommender system that selects products from sections based on a user query, however vague it may be. User query is: '{user_prompt}' What would your response as a recommender system? Provide only the list of products, product_ids and the store where to find them. Make sure all products come from the same store"""

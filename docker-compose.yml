@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    #command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; uvicorn app.main:app --host 0.0.0.0 --port 80'
+    command: bash -c 'uvicorn app.main:app --host 0.0.0.0 --port 80'
+    volumes:
+      - .:/app
+    ports:
+      - "8080:80"
+    environment:
+      - CHATGPT_API_KEY=${CHATGPT_API_KEY}
+      - DISCORD_ACCOUNT_TOKEN=${DISCORD_ACCOUNT_TOKEN}
+      - DISCORD_SERVER_ID=${DISCORD_SERVER_ID}
+      - DISCORD_CHANNEL_ID=${DISCORD_CHANNEL_ID}
+      - MIDJOURNEY_DOWNLOAD_BOT_TOKEN=${MIDJOURNEY_DOWNLOAD_BOT_TOKEN}
+    #restart: always
+  #bot:
+  #  build: .
+  #  command: python ./discord_bot/bot.py
+    #restart: always
