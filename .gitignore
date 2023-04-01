@@ -137,4 +137,4 @@ output/*
 
 #
 *.json
-*_cfg.yaml
+discord_bot_cfg.yaml

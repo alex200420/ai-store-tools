@@ -1,0 +1,9 @@
+# Default configuration
+discord:
+  path:
+    input: "data/input"
+    output: "data/output"
+  gcp:
+    bucket: ""
+    blob: ""
+    key: "credentials.json"
