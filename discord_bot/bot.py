@@ -9,8 +9,8 @@ from config import DISCORD
 import os
 import re
 from utils.cloud_utils import CloudStorage
-from database.schemas import ImageSchema, ImagePromptBaseSchema
-from database.crud import get_next_unloaded_prompts, create_image, create_image_prompt_base
+from database.schemas import ImageSchema, ImagePromptBaseSchema, PromptSchema
+from database.crud import get_next_unloaded_prompts, create_image, create_image_prompt_base, update_prompt
 from database import get_db
 from datetime import datetime
 
@@ -102,8 +102,8 @@ async def download_image(url, filename, prompt_id):
                 created_at = timestamp
             )
             create_image_prompt_base(db=db, image_prompt_base=image_prompt_data)
-            # TBD: Upload STATUS for PROMPT WITH PROMPT ID
-            
+            # Upload STATUS for PROMPT WITH PROMPT ID
+            update_prompt(db=db, prompt_id=prompt_id, prompt=PromptSchema(flg_loaded= True))
             #cleaning files
             os.remove(output_img_path)
 

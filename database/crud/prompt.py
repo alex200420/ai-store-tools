@@ -29,7 +29,8 @@ def update_prompt(db: Session, prompt_id: int, prompt: PromptSchema) -> Optional
     db_prompt = get_prompt(db, prompt_id=prompt_id)
     if db_prompt:
         for key, value in prompt.dict().items():
-            setattr(db_prompt, key, value)
+            if value is not None:
+                setattr(db_prompt, key, value)
         db.commit()
         db.refresh(db_prompt)
         return db_prompt
