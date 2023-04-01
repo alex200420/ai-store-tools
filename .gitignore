@@ -134,3 +134,7 @@ output/
 
 /input/*
 output/*
+
+#
+*.json
+*_cfg.yaml

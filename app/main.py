@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 from app.api.routers.ai_store import router
+from database import Base, engine
 import uvicorn
+
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 

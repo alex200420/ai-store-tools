@@ -9,3 +9,6 @@ discord:
       name: "imagine"
       version: "1077969938624553050"
       description: "Create images with Midjourney"
+  path:
+    input: "data/input"
+    output: "data/output"

@@ -3,8 +3,8 @@ version: '3'
 services:
   app:
     build: .
-    #command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; uvicorn app.main:app --host 0.0.0.0 --port 80'
-    command: bash -c 'uvicorn app.main:app --host 0.0.0.0 --port 80'
+    command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; uvicorn app.main:app --host 0.0.0.0 --port 80'
+    #command: bash -c 'uvicorn app.main:app --host 0.0.0.0 --port 80'
     volumes:
       - .:/app
     ports:
@@ -14,9 +14,32 @@ services:
       - DISCORD_ACCOUNT_TOKEN=${DISCORD_ACCOUNT_TOKEN}
       - DISCORD_SERVER_ID=${DISCORD_SERVER_ID}
       - DISCORD_CHANNEL_ID=${DISCORD_CHANNEL_ID}
+      - DATABASE_URL=${DATABASE_URL}
+    depends_on:
+      - db
+    #restart: always
+  bot:
+    build: .
+    command: python ./discord_bot/bot.py
+    environment:
       - MIDJOURNEY_DOWNLOAD_BOT_TOKEN=${MIDJOURNEY_DOWNLOAD_BOT_TOKEN}
+      - DATABASE_URL=${DATABASE_URL}
+    depends_on:
+      - db
     #restart: always
-  #bot:
-  #  build: .
-  #  command: python ./discord_bot/bot.py
+  db:
+    image: postgres:9.6.6-alpine
+    ports:
+      - 54320:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    container_name: aistoretools-postgres
     #restart: always
+    #expose:
+    #  - 5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: aistoretools
+volumes:
+  postgres_data:
