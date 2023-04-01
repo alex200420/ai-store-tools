@@ -102,6 +102,8 @@ async def download_image(url, filename, prompt_id):
                 created_at = timestamp
             )
             create_image_prompt_base(db=db, image_prompt_base=image_prompt_data)
+            # TBD: Upload STATUS for PROMPT WITH PROMPT ID
+            
             #cleaning files
             os.remove(output_img_path)
 

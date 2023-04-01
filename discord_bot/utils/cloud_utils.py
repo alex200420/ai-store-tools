@@ -12,13 +12,14 @@ class CloudStorage(object):
         )
         self.client = storage.Client(credentials=self.credentials)
         self.bucket = self.client.bucket(bucket)
+        self.bucket_name = bucket
         return None
     
     def upload_image(self, file_path, filename):
-        destination_blob_name = f'{DISCORD.gcp.blob}/{filename}.jpg'
+        destination_blob_name = f'{DISCORD.gcp.blob}/{filename}'
         blob = self.bucket.blob(destination_blob_name)
         self.upload_image_to_blob(blob, file_path)
-        return f"https://storage.googleapis.com/{destination_blob_name}"
+        return f"https://storage.googleapis.com/{self.bucket_name}/{destination_blob_name}"
     
     @staticmethod
     def upload_image_to_blob(blob, file_path):
