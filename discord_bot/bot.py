@@ -23,7 +23,7 @@ client = commands.Bot(command_prefix="*", intents=discord.Intents.all())
 
 cloud_conn = CloudStorage()
 
-db = get_db()
+db = next(get_db())
 
 def split_image(image_file):
     """Split an image into four equal parts and return them as a tuple."""

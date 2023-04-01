@@ -20,7 +20,7 @@ services:
     #restart: always
   bot:
     build: .
-    command: python ./discord_bot/bot.py
+    command: bash -c "export PYTHONPATH=$${PYTHONPATH}:$${pwd}; python ./discord_bot/bot.py"
     environment:
       - MIDJOURNEY_DOWNLOAD_BOT_TOKEN=${MIDJOURNEY_DOWNLOAD_BOT_TOKEN}
       - DATABASE_URL=${DATABASE_URL}
