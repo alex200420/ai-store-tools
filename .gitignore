@@ -135,6 +135,6 @@ output/
 /input/*
 output/*
 
-#
-*.json
+# Configuration Files
 discord_bot_cfg.yaml
+*credentials.json
