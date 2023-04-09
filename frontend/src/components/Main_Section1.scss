@@ -1,0 +1,429 @@
+@use "utils" as *;
+
+$color_type_0: rgb(0, 0, 0);
+$color_type_1: rgb(202, 119, 4);
+$color_type_2: rgb(217, 217, 217);
+$color_type_3: rgb(245, 240, 227);
+$color_type_4: rgb(251, 192, 175);
+$color_type_5: rgb(252, 191, 172);
+$color_type_6: rgb(252, 198, 183);
+$color_type_7: rgb(255, 255, 255);
+$color_type_8: rgba(0, 0, 0, 0.498);
+$color_type_9: rgba(100, 100, 100, 0.498);
+
+$border_radius_type_0: 10px 10px 10px 10px;
+$border_radius_type_1: 22.5px 22.5px 22.5px 22.5px;
+$border_radius_type_2: 30px 30px 0px 0px;
+$border_radius_type_3: 30px 30px 30px 30px;
+
+$font_type_0: 400 30px/1.5 "Poppins", Helvetica, Arial, serif;
+$font_type_1: 400 25px/1.52 "Poppins", Helvetica, Arial, serif;
+$font_type_2: 400 15px/1.53 "Poppins", Helvetica, Arial, serif;
+
+.section1 {
+  @include flex-column;
+  position: relative;
+  flex-grow: 1;
+}
+.content_box2 {
+  @include flex-column;
+  background: var(--src) center center / cover no-repeat;
+  border-style: solid;
+  border-color: $color_type_5;
+  border-width: 0px 0px 1px 0px;
+  position: relative;
+}
+.flexRow {
+  @include v-center-content;
+  width: 88.54%;
+  position: relative;
+  flex-grow: 1;
+  margin: 0px 2.57% 0px 8.89%;
+}
+.group {
+  @include flex-column;
+  position: relative;
+  flex: 0 0 auto;
+  min-width: 231px;
+  margin: 8.5px 0px 13.5px;
+}
+.title {
+  @include lg {
+    font-size: 24px;
+  }
+  @include sm {
+    font-size: 20px;
+  }
+  @include xxs {
+    font-size: 16px;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: $font_type_0;
+  color: $color_type_0;
+  text-align: center;
+  letter-spacing: 0px;
+  position: relative;
+  flex-grow: 1;
+}
+.icon1 {
+  width: 40px;
+  height: auto;
+  aspect-ratio: 1;
+  vertical-align: top;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  bottom: 4.5px;
+  left: -20px;
+}
+.flexRow__spacer {
+  @include flex-column;
+  position: relative;
+  flex: 100%;
+}
+.content_box {
+  @include flex-column;
+  border-style: solid;
+  border-color: $color_type_4;
+  border-width: 0px 1px 0px 1px;
+  position: relative;
+  flex: 0 1 127px;
+}
+.highlights {
+  @include lg {
+    margin: 22px 24px;
+  }
+  @include md {
+    margin: 22px 20px;
+  }
+  @include sm {
+    margin: 22px 16px;
+  }
+  @include tn {
+    margin: 22px 12px;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: $font_type_2;
+  color: $color_type_1;
+  text-align: center;
+  letter-spacing: 0px;
+  position: relative;
+  flex-grow: 1;
+  margin: 22px 31px;
+}
+.flexRow__spacer1 {
+  @include flex-column;
+  position: relative;
+  flex: 0 1 21px;
+}
+.content_box1 {
+  @include flex-column;
+  border-style: solid;
+  border-color: $color_type_6;
+  border-width: 0px 1px 0px 1px;
+  position: relative;
+  flex: 0 1 118px;
+}
+.highlights1 {
+  @include lg {
+    margin: 22px 27px 22px 20px;
+  }
+  @include md {
+    margin: 22px 20px 22px 16px;
+  }
+  @include sm {
+    margin: 22px 16px;
+  }
+  @include xs {
+    margin: 22px 12px;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: $font_type_2;
+  color: $color_type_1;
+  text-align: center;
+  letter-spacing: 0px;
+  position: relative;
+  flex-grow: 1;
+  margin: 22px 27px 22px 26px;
+}
+.flexRow__spacer2 {
+  @include flex-column;
+  position: relative;
+  flex: 0 1 34px;
+}
+.flexRow__cell {
+  @include flex-column;
+  position: relative;
+  flex: 0 1 45px;
+}
+.icon {
+  width: 45px;
+  height: auto;
+  aspect-ratio: 1;
+  vertical-align: top;
+  object-fit: cover;
+  object-position: center center;
+  position: relative;
+  min-width: 45px;
+  margin: 11px 0px;
+}
+.rect {
+  @include xl {
+    width: 85.02%;
+  }
+  @include lg {
+    width: 88.33%;
+  }
+  @include md {
+    width: 90.98%;
+  }
+  @include sm {
+    width: 93.08%;
+  }
+  @include xs {
+    width: 94.72%;
+  }
+  @include xxs {
+    width: 95.99%;
+  }
+  @include tn {
+    width: 96.96%;
+  }
+  background-color: $color_type_3;
+  border-radius: $border_radius_type_2;
+  width: 80.97%;
+  position: relative;
+  min-height: 457px;
+  margin: 45px auto 0px;
+}
+.content_box3 {
+  @include xl {
+    width: 89.99%;
+  }
+  @include lg {
+    width: 92.3%;
+  }
+  @include md {
+    width: 94.11%;
+  }
+  @include sm {
+    width: 95.52%;
+  }
+  @include xs {
+    width: 96.6%;
+  }
+  @include xxs {
+    width: 97.43%;
+  }
+  @include tn {
+    width: 98.06%;
+  }
+  @include flex-column;
+  background: linear-gradient(180deg, #FAE2C9 0%, #9A734C 99.99%, rgba(217, 217, 217, 0) 100%);
+  border-radius: 30px;
+  width: 85%;
+  position: relative;
+  margin: 0px auto;
+}
+.flexRow1 {
+  @include lg {
+    width: 93.02%;
+  }
+  @include md {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    row-gap: 16px;
+    width: 94.68%;
+  }
+  @include sm {
+    width: 95.95%;
+  }
+  @include xs {
+    width: 96.93%;
+  }
+  @include xxs {
+    width: 97.68%;
+  }
+  @include tn {
+    width: 98.25%;
+  }
+  display: flex;
+  align-items: center;
+  width: 90.91%;
+  position: relative;
+  flex-grow: 1;
+  margin: 18px auto;
+}
+.flexRow1__cell {
+  @include md {
+    flex: 0 0 calc(1 / 2 * 100% - 16px / 2);
+    min-width: unset;
+  }
+  @include sm {
+    flex: 0 0 calc(1 / 1 * 100% - 0px / 1);
+  }
+  @include flex-column;
+  position: relative;
+  flex: 1 1 168px;
+}
+.rect5 {
+  background-color: $color_type_2;
+  position: relative;
+  flex-grow: 1;
+  min-height: 161px;
+}
+.flexRow1__spacer {
+  @include md {
+    flex: 0 0 16px;
+    min-width: unset;
+  }
+  @include sm {
+    display: none;
+  }
+  @include flex-column;
+  position: relative;
+  flex: 0 1 75px;
+}
+.flexRow1__spacer1 {
+  @include md {
+    display: none;
+  }
+  @include flex-column;
+  position: relative;
+  flex: 0 1 75px;
+}
+.flexRow1__cell1 {
+  @include md {
+    flex: 0 0 calc(1 / 1 * 100% - 0px / 1);
+    min-width: unset;
+  }
+  @include flex-column;
+  position: relative;
+  flex: 1 1 168px;
+}
+.rect51 {
+  @include md {
+    margin: 0px 162px;
+  }
+  @include sm {
+    margin: 0px;
+  }
+  background-color: $color_type_2;
+  position: relative;
+  flex-grow: 1;
+  min-height: 161px;
+}
+.medium_title {
+  @include lg {
+    font-size: 20px;
+  }
+  @include sm {
+    font-size: 16px;
+  }
+  @include tn {
+    width: 24.58%;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: $font_type_1;
+  color: $color_type_7;
+  text-align: center;
+  letter-spacing: 0px;
+  width: 19.65%;
+  position: relative;
+  min-height: 47px;
+  margin: 23px auto 0px;
+}
+.rect1 {
+  @include lg {
+    margin: 0px 32px;
+  }
+  @include md {
+    margin: 0px 28px;
+  }
+  @include sm {
+    margin: 0px 24px;
+  }
+  @include xs {
+    margin: 0px 20px;
+  }
+  @include xxs {
+    margin: 0px 16px;
+  }
+  background-color: $color_type_9;
+  border-radius: $border_radius_type_0;
+  outline: 4px solid rgb(34, 7, 0);
+  outline-offset: -4px;
+  position: relative;
+  min-height: 105px;
+  margin: 0px 40px;
+}
+.box {
+    box-sizing: border-box;
+    position: relative;
+    width: 123px;
+    height: 50px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 80px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px auto 10px;
+}
+.image1 {
+  @include lg {
+    margin: 17px 20px 17px 27px;
+  }
+  @include md {
+    margin: 17px 16px 17px 20px;
+  }
+  @include sm {
+    margin: 17px 16px;
+  }
+  @include xs {
+    margin: 17px 12px;
+  }
+  width: 70px;
+  height: auto;
+  aspect-ratio: 6.36;
+  vertical-align: top;
+  object-fit: cover;
+  object-position: center center;
+  position: relative;
+  min-width: 70px;
+  margin: 17px 26px 17px 27px;
+}
+.submitButtonStyle {
+  @include v-center-content;
+  width: 71px;
+  height: 23px;
+  left: 26px;
+  top: 11px;
+  
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  /* identical to box height */
+  text-align: center;
+  
+  background: linear-gradient(180deg, #D8A541 45.83%, #260A01 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.buttonBox {
+  flex: inherit;
+  display: flex
+}
