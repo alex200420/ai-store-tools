@@ -2,6 +2,7 @@ import React from 'react';
 import './Main_Section1.scss';
 import logo from '../logo.svg'
 import user_icon from '../user_icon.svg'
+import ComponentMainImage from './ComponentMainImage.js'
 
 function RenderSection() {
   return (
@@ -40,7 +41,9 @@ function RenderSection() {
         </div>
       </div>
 
-      <div className="rect" />
+      <div className="rect" >
+        <ComponentMainImage />
+      </div>
 
       <div
         className="content_box3">

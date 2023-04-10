@@ -174,30 +174,8 @@ $font_type_2: 400 15px/1.53 "Poppins", Helvetica, Arial, serif;
   margin: 11px 0px;
 }
 .rect {
-  @include xl {
-    width: 85.02%;
-  }
-  @include lg {
-    width: 88.33%;
-  }
-  @include md {
-    width: 90.98%;
-  }
-  @include sm {
-    width: 93.08%;
-  }
-  @include xs {
-    width: 94.72%;
-  }
-  @include xxs {
-    width: 95.99%;
-  }
-  @include tn {
-    width: 96.96%;
-  }
   background-color: $color_type_3;
   border-radius: $border_radius_type_2;
-  width: 80.97%;
   position: relative;
   min-height: 457px;
   margin: 45px auto 0px;
